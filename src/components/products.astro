@@ -1,0 +1,167 @@
+---
+
+const data = [
+  {
+    id: 1,
+    title: 'Techos'
+  },
+  {
+    id: 2,
+    title: 'Construcción'
+  },
+  {
+    id: 3,
+    title: 'Pisos / Decks'
+  },
+  {
+    id: 4,
+    title: 'Revestimientos'
+  },
+  {
+    id: 5,
+    title: 'Muebles'
+  },
+  {
+    id: 6,
+    title: 'Aislantes'
+  }
+]
+---
+<h4 class="text-lg text-primary-400 uppercase">Nuestros productos</h4>
+<h3 class="text-4xl mt-4 mb-12">Áreas de aplicación</h3>
+<div>
+  <nav>
+    <ul class="flex items-center justify-around border-y border-y-primary-500">
+      {data.map(item => (
+        <li class="flex-1 text-center">
+          <a 
+            href="#" 
+            data-product-tab={item.id} 
+            class="text-primary-400 [&.current]:font-bold [&.current]:bg-primary-500 [&.current]:text-white inline-block py-3 uppercase hover:bg-primary-500 hover:text-white transition duration-200 w-full">
+            {item.title}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+  <div class="my-8">
+    <article class="hidden" data-product-content="1">
+      <div class="grid grid-cols-3 gap-8">
+        <div class="flex flex-col justify-between h-full">
+          <h5 class="text-4xl">Pino impregnado Elliotis/Taeda/Paraná</h5>
+          <img src="/assets/pino-impregnado.webp" />
+        </div>
+        <div class="flex flex-col justify-between h-full">
+          <h5 class="text-4xl">Saligna</h5>
+          <img src="/assets/saligna.webp" />
+        </div>
+        <div class="flex flex-col justify-between h-full">
+          <h5 class="text-4xl">Saligna</h5>
+          <img src="/assets/saligna.webp" />
+        </div>
+      </div>
+    </article>
+
+    <article class="hidden" data-product-content="2">
+      <div class="grid grid-cols-3 gap-8">
+        <div class="flex flex-col justify-between h-full gap-2">
+          <h5 class="text-4xl">Saligna</h5>
+          <img src="/assets/saligna.webp" class="w-full h-full object-cover aspect-square" />
+        </div>
+        <div class="flex flex-col justify-between h-full gap-2">
+          <h5 class="text-4xl">Vigas Multilaminadas </h5>
+          <div class="flex flex-col gap-8">
+            <img src="/assets/vigas.webp"  class="w-full h-full object-cover aspect-square" />
+          </div>
+        </div>
+        <div class="flex flex-col justify-between h-full gap-2">
+          <h5 class="text-4xl">Vigas Multilaminadas</h5>
+          <div class="flex flex-col gap-8">
+            <img src="/assets/vigas-2.webp" class="w-full h-full object-cover aspect-square" />
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="hidden" data-product-content="3">
+      <div class="grid grid-cols-3 gap-8">
+        <div class="flex flex-col justify-between h-full gap-2">
+          <h5 class="text-4xl">Decks</h5>
+          <img src="/assets/decks.webp" />
+        </div>
+        <div class="flex flex-col justify-between h-full gap-2">
+          <h5 class="text-4xl">Guayubira</h5>
+          <img src="/assets/guayubira.webp" />
+        </div>
+        <div class="flex flex-col justify-between h-full gap-2">
+          <h5 class="text-4xl">Guayubira</h5>
+          <img src="/assets/guayubira.webp" />
+        </div>
+      </div>
+    </article>
+
+    <article class="hidden" data-product-content="4">
+      <div class="grid grid-cols-3 gap-8">
+        <div class="flex flex-col justify-between h-full gap-2">
+          <h5 class="text-4xl">Machimbre</h5>
+          <img src="/assets/machimbre-2.webp" class="w-full h-full object-cover aspect-square" />
+        </div>
+        <div class="flex flex-col justify-between h-full gap-2">
+          <h5 class="text-4xl">Machimbre</h5>
+          <img src="/assets/machimbre-2.webp" class="w-full h-full object-cover aspect-square" />
+        </div>
+        <div class="flex flex-col justify-between h-full gap-2">
+          <h5 class="text-4xl">Revestimiento  Nordico</h5>
+          <img src="/assets/revestimiento.webp" class="w-full h-full object-cover aspect-square" />
+        </div>
+      </div> 
+    </article>
+
+    <article class="hidden" data-product-content="5">
+      <div class="grid grid-cols-3 gap-8">
+        <div class="flex flex-col justify-between h-full gap-2">
+          <h5 class="text-4xl">Melaminas</h5>
+          <div class="flex flex-col gap-8">
+            <img src="/assets/melamina.webp" class="w-full h-full object-cover aspect-square" />
+          </div>
+        </div>
+        <div class="flex flex-col justify-between h-full gap-2">
+          <h5 class="text-4xl">OSB y Enchapados</h5>
+          <div class="flex flex-col gap-8">
+            <img src="/assets/enchapado.webp" class="w-full h-full object-cover aspect-square" />
+          </div>
+        </div>
+        <div class="flex flex-col justify-between h-full gap-2">
+          <h5 class="text-4xl">Pino</h5>
+          <img src="/assets/pino.webp" class="w-full h-full object-cover object-bottom  aspect-square" />
+        </div>
+      </div> 
+    </article>
+
+    <article class="hidden" data-product-content="6">
+      <div class="grid grid-cols-4">
+        <img src="/assets/aislante-1.webp" />
+        <img src="/assets/aislante-2.webp" />
+        <img src="/assets/aislante-3.webp" />
+        <img src="/assets/aislante-4.webp" />
+      </div>
+    </article>
+  </div>
+</div>
+
+<script is:inline>
+  const tabs = document.querySelectorAll('[data-product-tab]')
+  tabs.forEach(tab => {
+    tab.addEventListener('click', e => {
+      e.preventDefault()
+      const tabId = e.target.getAttribute('data-product-tab')
+      const content = document.querySelector(`[data-product-content="${tabId}"]`)
+      const contents = document.querySelectorAll('[data-product-content]')
+      contents.forEach(c => c.classList.add('hidden'))
+      content.classList.remove('hidden')
+      tabs.forEach(t => t.classList.remove('current'))
+      tab.classList.add('current')
+    })
+  })
+  tabs[0].click()
+</script>
