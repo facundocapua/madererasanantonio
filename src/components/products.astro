@@ -31,9 +31,9 @@ const data = [
 <h3 class="text-4xl mt-4 mb-12">Áreas de aplicación</h3>
 <div>
   <nav>
-    <ul class="flex items-center justify-around border-y border-y-primary-500">
+    <ul class="flex flex-wrap items-center justify-around   gap-y-4">
       {data.map(item => (
-        <li class="flex-1 text-center">
+        <li class="basis-1/2 lg:basis-0 flex-1 text-center border-y border-y-primary-500">
           <a 
             href="#" 
             data-product-tab={item.id} 
@@ -46,7 +46,7 @@ const data = [
   </nav>
   <div class="my-8">
     <article class="hidden" data-product-content="1">
-      <div class="grid grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div class="flex flex-col justify-between h-full">
           <h5 class="text-4xl">Pino impregnado Elliotis/Taeda/Paraná</h5>
           <img src="/assets/pino-impregnado.webp" />
@@ -63,7 +63,7 @@ const data = [
     </article>
 
     <article class="hidden" data-product-content="2">
-      <div class="grid grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div class="flex flex-col justify-between h-full gap-2">
           <h5 class="text-4xl">Saligna</h5>
           <img src="/assets/saligna.webp" class="w-full h-full object-cover aspect-square" />
@@ -84,7 +84,7 @@ const data = [
     </article>
 
     <article class="hidden" data-product-content="3">
-      <div class="grid grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div class="flex flex-col justify-between h-full gap-2">
           <h5 class="text-4xl">Decks</h5>
           <img src="/assets/decks.webp" />
@@ -101,7 +101,7 @@ const data = [
     </article>
 
     <article class="hidden" data-product-content="4">
-      <div class="grid grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div class="flex flex-col justify-between h-full gap-2">
           <h5 class="text-4xl">Machimbre</h5>
           <img src="/assets/machimbre-2.webp" class="w-full h-full object-cover aspect-square" />
@@ -118,7 +118,7 @@ const data = [
     </article>
 
     <article class="hidden" data-product-content="5">
-      <div class="grid grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div class="flex flex-col justify-between h-full gap-2">
           <h5 class="text-4xl">Melaminas</h5>
           <div class="flex flex-col gap-8">
@@ -139,7 +139,7 @@ const data = [
     </article>
 
     <article class="hidden" data-product-content="6">
-      <div class="grid grid-cols-4">
+      <div class="grid grid-cols-2 lg:grid-cols-4">
         <img src="/assets/aislante-1.webp" />
         <img src="/assets/aislante-2.webp" />
         <img src="/assets/aislante-3.webp" />
