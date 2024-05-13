@@ -11,7 +11,7 @@ import Products from '../components/products.astro'
     <title>Maderera San Antonio</title>
     <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="/favicon.png">
   </head>
-  <body class="bg-black text-white font-montserrat grid grid-rows-[1fr_auto] min-h-svh">
+  <body class="bg-black text-white font-montserrat grid grid-rows-[auto_minmax(100vh,auto)_auto]">
     <style is:global>
       @font-face {
         font-family: 'Montserrat';
@@ -21,8 +21,8 @@ import Products from '../components/products.astro'
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
       }
     </style>
-    <main class="flex justify-center items-center">
-      <section class="flex flex-col gap-8 items-center">
+    <header>
+      <div class="container mx-auto my-8 flex items-center justify-center md:justify-between">
         <div class="flex items-center gap-4">
           <div class="w-[150px] md:w-[100px]">
             <img src="/assets/logo.webp" class="object-contain" />
@@ -32,13 +32,55 @@ import Products from '../components/products.astro'
             <h2 class="uppercase text-gray-300 text-4xl md:text-2xl tracking-[0.63em]">Maderera</h2>
           </div>
         </div>
-        <h2 class="text-5xl md:text-4xl font-semibold text-gray-200 tracking-[0.2em]">Proximamente</h2>
+        <nav class="hidden md:block">
+          <ul class="flex items-center justify-center gap-8 uppercase text-xl">
+            <li><a href="/" class="hover:text-primary-400 transition duration-200">Inicio</a></li>
+            <li><a href="/productos" class="hover:text-primary-400 transition duration-200">Productos</a></li>
+            <li><a href="/contacto" class="hover:text-primary-400 transition duration-200">Contacto</a></li>
+          </ul>
+        </nav>
+        <a class="bg-primary-400 py-4 px-8 uppercase text-gray-700 text-lg hidden md:inline-block" href="https://wa.me/message/MBF7IKORKS5LC1" rel="noreferer">Consultá gratis</a>
+      </div>
+    </header>
+    <main>
+      <section class="relative">
+        <div class="absolute bg-[url('/assets/bg-hero.webp')] bg-no-repeat bg-cover bg-center h-full w-full -z-10 opacity-40"></div>
+        <div class="max-w-2xl lg:container mx-auto py-48 flex items-center justify-center md:justify-between">
+          <header class="text-center md:text-left">
+            <h4 class="text-3xl md:text-2xl text-primary-400 uppercase">Gente de buena madera</h4>
+            <h3 class="text-5xl md:text-6xl text-balance my-12">Comprometidos con nuestros clientes</h3>
+            <a href="#" class="bg-primary-400 py-4 px-8 uppercase text-gray-700 text-lg hidden md:inline-block">Ver más</a>
+          </header>
+          <footer class="hidden md:block">
+            <img src="/assets/hero.webp" class="scale-x-[-1] max-w-[600px]" />
+          </footer>
+        </div>
+      </section>
+      <section class="w-11/12 md:container mx-auto py-12 md:py-24 px-8 md:px-32 bg-white -m-24 mb-24 text-gray-800">
+        <div class="flex items-center justify-between gap-12">
+          <footer class="hidden md:block">
+            <img src="/assets/saligna.webp" class="max-w-[600px]" />
+          </footer>
+          <header class="w-full flex flex-col">
+            <h4 class="text-2xl text-primary-400 uppercase">¿Quiénes somos?</h4>
+            <p class="text-gray-600 text-balance mt-4 inline-block">
+              Somos una empresa con trayectoria probada en dónde hacer es mejor que decir, cumpliendo con la palabra empeñada, ya sea con nuestros colaboradores, clientes o proveedores.
+            </p>
+            <p class="text-gray-600 text-balance my-4 inline-block">
+              Nacimos y crecimos proveyendo soluciones integrales para techos, y el crecimiento y las necesidades de nuestros clientes, nos fueron llevando a atender otros rubros, y prestar diferentes servicios, dónde lo que se prioriza en todos los casos, es la velocidad de atención, el cumplimiento en los tiempos de entrega, con una calidad acorde al precio pactado.
+            </p>
+            <a href="#" class="bg-primary-400 inline-block py-4 px-8 uppercase text-white text-lg self-center md:self-start">Ver más</a>
+          </header>
+        </div>
+        <div class="mt-8">
+          <Products />
+        </div>
       </section>
     </main>
     <footer class="mb-8">
       <hr class="w-full h-0.5 border-0 bg-gradient-to-r from-transparent via-primary-500 to-transparent my-6 rounded-full" />
       <div class="flex flex-col md:flex-row justify-center lg:justify-between max-w-xl lg:max-w-7xl mx-auto gap-y-16">
-        <div class="hidden lg:flex justify-center lg:justify-start items-center gap-4">
+        <div class="flex justify-center lg:justify-start items-center gap-4">
           <div class="w-[120px] lg:w-[70px]">
             <img src="/assets/logo.webp" width="120" class="object-contain" />
           </div>
